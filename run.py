@@ -35,4 +35,4 @@ def list_users():
             click.echo("---")
 
 if __name__ == '__main__':
-    app.run(host='128.199.183.216', port=5000, debug=True)
+    app.run(debug=True)
