@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Degen Capital - Trend Following</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">Degen Capital</div>
+                <ul>
+                    <li><a href="#" id="home-nav">Home</a></li>
+                    <li><a href="#" id="pricing-nav">Pricing</a></li>
+                    <li><a href="#" id="research-nav">Research</a></li>
+                    <li><a href="#" id="philosophy-nav">Philosophy</a></li>
+                    <li><a href="#" id="login-nav">Login</a></li>
+                    <li><a href="#" id="register-nav">Register</a></li>
+                    <li><a href="#" id="dashboard-nav" style="display: none;">Dashboard</a></li>
+                    <li><a href="#" id="logout-nav" style="display: none;">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="home">
+                <h1>What We Do</h1>
+                <p>We focus on trend-following systematic trading strategies. We love collecting risk premia.</p>
+                <div class="features">
+                    <div class="feature">
+                        <h2>Robust Strategy</h2>
+                        <img src="equity_curve.png" alt="Equity Curve" style="max-width: 100%; height: auto;">
+                        <ul>
+                            <li>Great risk-adjusted returns with positive skew.</li>
+                            <li>Don't worry about the volatility of crypto - we size positions so they're inversely proportional to a market-specific volatility forecast.</li>
+                        </ul>
+                    </div>
+                    <div class="feature">
+                        <h2>Universe Selection</h2>
+                        <img src="symbols.png" alt="Symbols" style="max-width: 100%; height: auto;">
+                        <ul>
+                            <li>Trend returns are mainly driven by universe selection and risk management, the signals are just icing on the cake.</li>
+                            <li>Crypto doesn't offer too much diversification, but single asset Sharpe Ratios are higher than in other markets.</li>
+                        </ul>
+                    </div>
+                </div>
+                <p>You retain full ownership of your assets. We trade on your account but cannot move assets outside it. You maintain complete control and can revoke access at any time.</p>
+            </section>
+
+            <section id="auth" style="display: none;">
+                <div id="login">
+                    <h2>Login</h2>
+                    <form id="login-form">
+                        <input type="text" id="login-username" placeholder="Username" required>
+                        <input type="password" id="login-password" placeholder="Password" required>
+                        <button type="submit">Login</button>
+                    </form>
+                </div>
+                <div id="register" style="display: none;">
+                    <h2>Register</h2>
+                    <form id="register-form">
+                        <input type="text" id="register-username" placeholder="Username" required>
+                        <input type="email" id="register-email" placeholder="Email" required>
+                        <input type="password" id="register-password" placeholder="Password" required>
+                        <button type="submit">Register</button>
+                    </form>
+                </div>
+            </section>
+
+            <section id="pricing" style="display: none;">
+                <h2>Pricing</h2>
+                <p>Our pricing information will be available soon.</p>
+            </section>
+
+            <section id="research" style="display: none;">
+                <h2>Research</h2>
+                <p>Explore our latest research and insights.</p>
+            </section>
+
+            <section id="philosophy" style="display: none;">
+                <h2>Our Philosophy</h2>
+                <p>Learn more about our trading philosophy and approach.</p>
+            </section>
+
+            <section id="dashboard" style="display: none;">
+                <h2>Dashboard</h2>
+                <div id="api-credentials" class="card">
+                    <h3 id="api-credentials-title">Set API Credentials</h3>
+                    <form id="api-form">
+                        <input type="text" id="api-key" placeholder="API Key" required>
+                        <input type="password" id="api-secret" placeholder="API Secret" required>
+                        <button type="submit" id="api-submit-button">Set Credentials</button>
+                    </form>
+                </div>
+                <div id="trading">
+                    <h3>Trading</h3>
+                    <div id="daily-trades-toggle" class="toggle-switch">
+                        <input type="checkbox" id="daily-trades-switch" checked>
+                        <label for="daily-trades-switch">
+                            <span class="toggle-slider"></span>
+                            <span class="toggle-text">Turn the bot on and off</span>
+                        </label>
+                    </div>
+                    <p class="toggle-description">(Note: If you turn it off, it won't close any existing positions)</p>
+                </div>
+                <div id="subscription-message" style="display: none;"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>

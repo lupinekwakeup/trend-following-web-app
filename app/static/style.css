@@ -1,0 +1,298 @@
+:root {
+    --color-black: #000000;
+    --color-light-gray: #EFE9E8;
+    --color-blue: #829CBA;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-light-gray);
+    color: var(--color-black);
+}
+
+header {
+    background-color: var(--color-blue);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-black);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li a {
+    color: var(--color-black);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--color-blue);
+}
+
+main {
+    padding: 2rem;
+    max-width: 1600px; /* Increased max-width */
+    margin: 0 auto;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature {
+    background-color: var(--color-blue);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature h2 {
+    color: var(--color-black);
+    margin-bottom: 1rem;
+}
+
+.feature img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+button {
+    background-color: var(--color-light-gray); /* Light button background */
+    color: var(--color-black); /* Black text */
+    border: none;
+    padding: 0.75rem 1.5rem; /* Increase padding for larger button */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 1rem auto; /* Center the button */
+    display: block; /* Ensure the button is centered */
+}
+
+button:hover {
+    background-color: var(--color-blue); /* Blue background on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+input {
+    display: block;
+    width: calc(100% - 2rem); /* Adjust width to account for padding */
+    margin: 1rem auto; /* Center the input boxes */
+    padding: 0.75rem; /* Increase padding for larger input boxes */
+    border: 1px solid var(--color-blue);
+    background-color: var(--color-light-gray);
+    color: var(--color-black);
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+#auth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#login, #register {
+    background-color: var(--color-blue);
+    padding: 2rem;
+    border-radius: 5px;
+    color: var(--color-black); /* Black text */
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#login h2, #register h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--color-black);
+}
+
+#api-credentials {
+    max-width: 400px;
+    margin: 2rem auto;
+    background-color: var(--color-blue);
+    padding: 2rem;
+    border-radius: 5px;
+    color: var(--color-black);
+    text-align: center;
+}
+
+#home, #dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#dashboard {
+    padding: 2rem;
+    border-radius: 5px;
+    color: var(--color-black); /* Black text */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.card {
+    background-color: var(--color-blue); /* Different background color */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.card h3 {
+    margin-top: 0;
+    color: var(--color-black); /* Black text */
+}
+
+#api-credentials, #trading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#api-credentials form, #trading {
+    width: 100%;
+}
+
+#api-credentials input, #trading input {
+    width: calc(100% - 2rem);
+    margin: 1rem auto;
+    padding: 0.75rem;
+    border: 1px solid var(--color-blue);
+    background-color: var(--color-light-gray);
+    color: var(--color-black);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#api-credentials button, #trading button {
+    background-color: var(--color-light-gray); /* Light button background */
+    color: var(--color-black); /* Black text */
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 1rem auto;
+    display: block;
+}
+
+.message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+.message.success {
+    background-color: #4CAF50;
+}
+
+.message.error {
+    background-color: #f44336;
+}
+
+.toggle-switch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    background-color: #ccc;
+    border-radius: 34px;
+    margin-right: 10px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + label .toggle-slider {
+    background-color: #2196F3;
+}
+
+input:checked + label .toggle-slider:before {
+    transform: translateX(26px);
+}
+
+.toggle-text {
+    font-size: 16px;
+}
+
+.toggle-description {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+#daily-trades-toggle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#philosophy, #pricing, #research {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 5px;
+    color: var(--color-black); /* Black text */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
