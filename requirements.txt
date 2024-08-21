@@ -5,3 +5,4 @@ flask_jwt_extended==4.6.0
 celery==5.4.0
 alembic==1.13.2
 click==8.1.7
+gunicorn==20.1.0
