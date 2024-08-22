@@ -11,3 +11,4 @@ pandas
 numpy
 cryptography
 redis
+psycopg2
