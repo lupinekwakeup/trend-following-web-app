@@ -18,10 +18,12 @@ def get_total_equity(session):
 
 def get_position_size(session, symbol):
     response = session.get_positions(category="linear", symbol=symbol)
-    print(response)
 
     if response['retCode'] == 0:
         size = float(response['result']['list'][0]['size'])
+        side = response['result']['list'][0]['side']
+        if side == 'Sell':
+            size = -size
         return size
     else:
         print("Error fetching position info:", response['retMsg'])
